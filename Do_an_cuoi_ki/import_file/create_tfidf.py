@@ -53,9 +53,9 @@ def create_tfidf(documents_clean):
   df_tfidf = pd.DataFrame(X, index=vectorizer.get_feature_names())
   return df_tfidf, vectorizer
 
-def get_similar_articles(q, df, files_path, vectorizer):
+def get_similar_articles(q, df, vectorizer):
   # tiền xử lí câu truy vấn
-  q = [text_preprocess(q)]
+  q = [q]
   q_vec = vectorizer.transform(q).toarray().reshape(df.shape[0],)
   # print(q_vec)
   sim = {}
