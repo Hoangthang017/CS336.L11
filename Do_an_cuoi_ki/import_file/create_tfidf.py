@@ -60,7 +60,7 @@ def get_similar_articles(q, df, vectorizer):
   # print(q_vec)
   sim = {}
   # tính toán độ tương đồng
-  for i in range(len(files_path)):
+  for i in range(df.shape[1]):
     sim[i] = np.dot(df.loc[:, str(i)].values, q_vec) / np.linalg.norm(df.loc[:, str(i)]) * np.linalg.norm(q_vec)
   # print('độ dài ', len(sim))
   # sắp xếp độ tương đồng
