@@ -8,3 +8,5 @@
 
 ##**Đề tài:**
 ###**Truy vấn thông tin trong lĩnh vực hẹp : Bài báo bóng đá**
+
+##**Hướng dẫn chạy**
