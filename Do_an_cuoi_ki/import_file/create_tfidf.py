@@ -1,4 +1,3 @@
-
 # import các thư viện cần thiết
 from glob import glob
 import os
@@ -22,7 +21,7 @@ def text_preprocess(document):
   document_test = re.sub(r'[%s]' % re.escape(string.punctuation), ' ', document_test)
   # thay tern v_league
   document_test = word_tokenize(document_test,"text").replace("v league","v_league")
-  # xóa bỏ các khoảng trắng thừa 
+  # xóa bỏ các khoảng trắng thừa
   document_test = re.sub(r'\s{2,}', ' ', document_test)
   return document_test
 
@@ -67,3 +66,9 @@ def get_similar_articles(q, df, vectorizer):
   sim_sorted = sorted(sim.items(), key=lambda x: x[1], reverse=True)
   # print(type(sim_sorted))
   return sim_sorted
+
+# hàm lấy đường dẫn bài viết 
+def find_file_path(file_name, files_path):
+  for file_path in files_path:
+    if os.path.basename(file_path) == file_name:
+      return file_path
