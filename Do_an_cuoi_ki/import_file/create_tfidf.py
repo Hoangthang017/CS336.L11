@@ -72,3 +72,10 @@ def find_file_path(file_name, files_path):
   for file_path in files_path:
     if os.path.basename(file_path) == file_name:
       return file_path
+
+# hàm lấy nội dung từ đường dẫn 
+def get_content(file_path):
+  f = open(file_path)
+  content = f.read()
+  f.close()
+  return content
