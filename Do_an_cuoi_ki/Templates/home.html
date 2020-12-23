@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask Tutorial</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <!-- <h1> My First Try Using Flask </h1> -->
+    <!-- <p> Flask is Fun </p> -->
+    <div id="true-random">
+    	<span id="true-random-title"></span>
+    	<br>
+    	<span id="true-random-min">
+    	<form id="search-site" action="/" method="get" autocomplete="off">
+            <input class="topinput" id="search-keyword" name="key" type="text" aria-label="Bạn tìm gì..." placeholder="Bạn tìm gì..." autocomplete="off" onkeyup="SuggestSearch(event,this, 0);" maxlength="150"  size="150" />
+            <!-- <button class="btntop" type="submit" aria-label="tìm kiếm"><i class="	"></i></button> -->
+        </form>
+        <!-- <div class="input-group">
+				<input type="text" class="searchinput form-control" placeholder="Tìm truyện..." autocomplete="off" />
+				<div class="input-group-btn">
+					<input type="submit" value="" class="searchbutton btn btn-default" />
+				</div>
+			</div> -->
+    	</span>
+        <h2 title="Câu truy vấn" style="text-align:center;color:Tomato;" >{{p}}</h2>
+        <h2 style="text-align:center;">{{a1}}</h2>
+        <p>{{b1}}<p>
+        <hr>
+
+        <h2 style="text-align:center;">{{a2}}</h2>
+        <p>{{b2}}<p>
+        <hr>
+
+        <h2 style="text-align:center;">{{a3}}</h2>
+        <p>{{b3}}<p>
+        <hr>
+
+        <h2 style="text-align:center;">{{a4}}</h2>
+        <p>{{b4}}<p>
+        <hr>
+
+        <h2 style="text-align:center;">{{a5}}</h2>
+        <p>{{b5}}<p>
+        <hr>
+
+        <h2 style="text-align:center;">{{a6}}</h2>
+        <p>{{b6}}<p>
+        <hr>
+
+        <h2 style="text-align:center;">{{a7}}</h2>
+        <p>{{b7}}<p>
+        <hr>
+
+        <h2 style="text-align:center;">{{a8}}</h2>
+        <p>{{b8}}<p>
+        <hr>
+
+        <h2 style="text-align:center;">{{a9}}</h2>
+        <p>{{b9}}<p>
+        <hr>
+
+        <h2 style="text-align:center;">{{a10}}</h2>
+        <p>{{b10}}<p>
+        <hr>
+
+    </div>
+    {% endblock %}
+  </body>
+</html>

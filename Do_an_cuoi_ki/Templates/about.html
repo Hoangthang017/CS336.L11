@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h1> About Flask </h1>
+    <div class="container">
+      <form method="post">
+        <div class="form-group">
+          <label for="code">Nhập câu truy vấn::</label><br><br>
+          <textarea class="form-control" rows="4" cols="50" name="code" id="code">{{code}}</textarea>
+          <input type="submit" value="Submit" class="btn btn-success btn-lg" style="margin-top: 20px;">
+          <input type="reset" value="Reset" class="btn btn-default btn-lg" style="margin-top: 20px;"              onclick="clear_result()">
+          </div>
+        </form>
+        <div class="result">
+          <h5>Programing language: <p>{{ a1 }}</p></h5>
+          <h5>Score: <p>{{ a2 }}</p></h5>
+        </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>
